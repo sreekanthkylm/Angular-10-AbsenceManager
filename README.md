@@ -1,4 +1,4 @@
-# AbsenceManager
+# Angular-10-AbsenceManager
  
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.
 
@@ -45,7 +45,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Todo App Screenshots
+## App Screenshots
 
 * Mobile - landerpage
 
