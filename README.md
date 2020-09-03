@@ -48,13 +48,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Todo App Screenshots
 
 * Mobile - landerpage
-![](assets/mobilelander.JPG)
+![](assets/mobilelander.jpg)
 
 * Mobile - Single User Search
-![](assets/mobilesingleuser.JPG)
+![](assets/mobilesingleuser.jpg)
 
 * Mobile - Absence in a date range
-![](assets/mobiledaterange.JPG)
+![](assets/mobiledaterange.jpg)
 
 * Mobile - Empty Absence list in a date range
 ![](assets/mobiledaterangeempty.PNG)
@@ -66,25 +66,25 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ![](assets/pagenotfound.PNG)
 
 * ipad - landerpage
-![](assets/ipadlander.JPG)
+![](assets/ipadlander.jpg)
 
 * ipad - Single User Search
-![](assets/ipadsingleuser.JPG)
+![](assets/ipadsingleuser.jpg)
 
 * ipad - Absence in a date range
-![](assets/ipaddaterange.JPG)
+![](assets/ipaddaterange.jpg)
 
 * laptop - landerpage- 2 Grid
-![](assets/lander2grid.PNG)
+![](assets/lander2grid.png)
 
 * laptop - landerpage- 3 Grid
-![](assets/lander3grid.PNG)
+![](assets/lander3grid.png)
 
 * laptop - Single User Search
-![](assets/singleuser.PNG)
+![](assets/singleuser.png)
 
 * laptop -  Absence in a date range
-![](assets/daterange.PNG)
+![](assets/daterange.png)
 
 * Export Absence - Imported calendar
 ![](assets/ICSimportedCalendar.PNG)
