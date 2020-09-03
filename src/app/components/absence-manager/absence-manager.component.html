@@ -1,0 +1,69 @@
+<div class="content" fxLayout="row wrap">
+    <!--Grid Column Toggle-->
+    <button mat-raised-button color="primary" (click)="toggleGridColumns()" fxHide.lt-md *ngIf="membersList.length>0">
+        <span class="material-icons">grid_on</span>
+        <span *ngIf="gridColumns === 3">3</span>
+        <span *ngIf="gridColumns === 2">2</span>
+    </button>
+    <button *ngIf="membersList.length>0" mat-raised-button class="flex-button-right" color="primary"
+        (click)="exportToIcs(membersList)">
+        Export Absences
+    </button>
+</div>
+<h1>Absence Manager</h1>
+<app-search></app-search>
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+    <ng-container *ngIf="membersList.length>0; else noData">
+        <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="50%" *ngFor="let member of membersList"
+            class="card-wrapper">
+            <!--Absences list grouped by userId-->
+            <mat-card class="mat-elevation-z4">
+                <mat-card-header>
+                    <div mat-card-avatar class="user-image"></div>
+                    <mat-card-title>{{member.name}}</mat-card-title>
+                    <mat-card-subtitle><b>User Id:</b> {{member.userId}} <b>Crew Id:</b> {{member.crewId}}
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <ul *ngIf="member.absences; else emptyData">
+                        <li *ngFor="let absence of member.absences">
+                            <mat-icon color="warn" *ngIf="absence.type=='sickness'">sick</mat-icon>
+                            <mat-icon color="primary" *ngIf="absence.type=='vacation'">flight_takeoff</mat-icon>
+                            {{member.name}}
+                            <span *ngIf="absence.type=='vacation'"> is on vacation </span>
+                            <span *ngIf="absence.type=='sickness'"> is sick </span>
+                            <span *ngIf="absence.startDate != absence.endDate">{{absence.startDate}} to
+                                {{absence.endDate}}</span>
+                            <span *ngIf="absence.startDate == absence.endDate">{{absence.startDate}}</span>
+                        </li>
+                    </ul>
+                    <ng-template #emptyData>
+                        <ul>
+                            <li>
+                                <mat-icon color="warn">event_busy</mat-icon>
+                                Absence List Empty
+                            </li>
+                        </ul>
+                    </ng-template>
+                </mat-card-content>
+                <mat-card-footer>
+                    <button mat-stroked-button class="div-button-right" color="primary" *ngIf="member.absences"
+                        (click)="exportToIcsMember(member.absences,member.name)">
+                        Export Absences</button>
+                </mat-card-footer>
+            </mat-card>
+        </div>
+    </ng-container>
+    <ng-template #noData>
+        <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" class="card-wrapper">
+            <mat-card class="mat-elevation-z4">
+                <mat-card-content>
+                    <li>
+                        <mat-icon color="warn">event_busy</mat-icon>
+                        No Data Found
+                    </li>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </ng-template>
+</div>

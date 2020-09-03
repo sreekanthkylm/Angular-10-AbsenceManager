@@ -1,0 +1,27 @@
+<div class="content" fxLayout="row wrap">
+    <div class="flex-button-left">
+        <mat-form-field appearance="fill">
+            <mat-label>User Id</mat-label>
+            <input matInput [(ngModel)] = "userId" (input)="enableUserSearchIcon()">
+            <button mat-button matSuffix mat-icon-button (click)="searchUserAbsences()" [disabled]="iconDisabled" >
+                <mat-icon>search</mat-icon>
+            </button>
+        </mat-form-field>
+    </div>
+    <div class="flex-button-right">
+        <mat-form-field appearance="fill">
+            <mat-label>Start Date</mat-label>
+            <input matInput [matDatepicker]="picker1" [(ngModel)] = "startDate" (dateChange)="enableSearchButton()">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>End Date</mat-label>
+            <input matInput [matDatepicker]="picker2" [(ngModel)] = "endDate" (dateChange)="enableSearchButton()">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="searchAbsencesInDateRange()" [disabled]="buttonDisabled">Search</button>
+    </div>
+</div>
