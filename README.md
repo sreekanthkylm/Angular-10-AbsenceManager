@@ -48,51 +48,67 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Todo App Screenshots
 
 * Mobile - landerpage
+
 ![](assets/mobilelander.jpg)
 
 * Mobile - Single User Search
+
 ![](assets/mobilesingleuser.jpg)
 
 * Mobile - Absence in a date range
+
 ![](assets/mobiledaterange.jpg)
 
 * Mobile - Empty Absence list in a date range
+
 ![](assets/mobiledaterangeempty.PNG)
 
 * Mobile - Empty Absence list for a user
+
 ![](assets/mobileuserabsenceempty.PNG)
 
 * Mobile - page not found
+
 ![](assets/pagenotfound.PNG)
 
 * ipad - landerpage
+
 ![](assets/ipadlander.jpg)
 
 * ipad - Single User Search
+
 ![](assets/ipadsingleuser.jpg)
 
 * ipad - Absence in a date range
+
 ![](assets/ipaddaterange.jpg)
 
 * laptop - landerpage- 2 Grid
+
 ![](assets/lander2grid.png)
 
 * laptop - landerpage- 3 Grid
+
 ![](assets/lander3grid.png)
 
 * laptop - Single User Search
+
 ![](assets/singleuser.png)
 
 * laptop -  Absence in a date range
+
 ![](assets/daterange.png)
 
 * Export Absence - Imported calendar
+
 ![](assets/ICSimportedCalendar.PNG)
 
 * Export Absence - ICS Events
+
 ![](assets/Icsevents.PNG)
 
 * Code Coverage
+
 ![](assets/unittestcoverage.PNG)
 
 ## Further help
